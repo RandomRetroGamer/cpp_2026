@@ -7,6 +7,8 @@ class work of comp science 2 c++
 > Includes homework 2 
 
 #summery of homework 2 
+
+
 /*---------------------------------------------------------------------
 
 -- summary of the code
