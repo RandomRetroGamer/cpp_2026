@@ -2,11 +2,11 @@
 class work of comp science 2 c++
 
 
-> includes homework 1
-> includes graphics, with basic rendering
-> Includes homework 2 
+> includes homework 1 \
+> includes graphics, with basic rendering \
+> Includes homework 2 \ 
 
-#summery of homework 2 
+# summery of homework 2 
 
 
 /*---------------------------------------------------------------------
