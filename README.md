@@ -71,3 +71,42 @@ a disear character with another ( changes # with @ or vis versa )
 -- i think i might have wrote too much notes 
 
 ---------------------------------------------------------------------*/
+
+# summery of homework 3 
+
+/*-----------------------------------------------------------------------
+
+summery of the code: 
+an overall progrma creates a Canvas that dynamically creates and manages 
+an 2D character-based drawing system using a char** array
+
+the canvas stores the character in a "column-major" format using C[col][row]
+each letter is drawn using a 5 * 5 grid of "#" and spaces.
+
+the main functions of this program uses dymanic memory allocation, It uses 
+new to allocated a 2D array, And also uses a destructor to free up all the 
+uses memory that was stored, which was the letters. This also expands the canvas
+that was dynamically created when a new letter are added.
+
+This also uses multiple constructors that are variable, such assignment
+
+Canvas(int width) > which creates a blank canvas of specified width
+Canvas(char x) > creates a 5 * 5 canvas contain one letter " A " through " D " 
+Canvas(string s) > builds a word by adding letters one at a time
+
+The letter rendering " A " through " D " already are predefrined using 5 *5 ASC11 patterns
+Then the characters are copied into the interal 2D array.
+
+The dynamic expansion is done by using " add(char x) " function that creates a larger
+canvas and preserves the existing letters. It adds shapcing and appends an new 5 * 5 letter
+to the right of the canvas
+
+width() > returns the current width
+to_string() > converts the 2D canvas into a printable string
+replace(old_char, new_char) > replaces characters across the entire conavas
+
+finally with the last bit of the code it deletes the allocated memory that the program used
+it is done by looping into each column and the outer pointer arrays and deletes them, this 
+prevents any memory leaks.
+
+-----------------------------------------------------------------------*/
