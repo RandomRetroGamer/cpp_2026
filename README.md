@@ -110,3 +110,62 @@ it is done by looping into each column and the outer pointer arrays and deletes 
 prevents any memory leaks.
 
 -----------------------------------------------------------------------*/
+# summery of homework 4
+
+
+/*-----------------------------------------------------------------------
+
+summery of the code:
+
+this code demostrates the double-stack algoritm and is the standard way of 
+looking throuhg the modern-web effectively, based on the URLs and actions 
+we do it deterins of the URL is considered Past or Future.
+
+throughout this code i haved used 
+["https://youtube.com"], ["https://google.com"]
+to shows how the data structure is managed and functions
+
+push > (pushes) a string variable into either past or future stack. 
+
+top > checks the top of the stack either from past or future, we see this by "past.top" & "future.top"
+
+pop > destroys and cleans the stack's top, 
+
+empty > we see this mainly in !<stack's name>.empty() to check if the stack is empty and determins
+how the code will move on from here
+
+size > checks the <stacks>.size(), it says in the name.
+
+these stacks behave how minipulates we use the browers 
+
+opening a page > pushes the URL to the top of the past stack
+important code note : past stack's top layer is the current_page 
+
+past stack :
+(1) ["https://youtube.com"]
+
+going to another new page > pushes the new URL into the past stack
+past stack :
+(1) ["https://google.com"] <-- becomes the new current page 
+(2) ["https://youtube.com"] <-- gets pushed down to the layer
+
+pressing back > pushes the top of the stack to the future stack 
+
+future stack :
+(1) ["https://google.com"] <-- the past's current page is now the top of the future stack 
+
+past stack :
+(1) ["https://youtube.com"] <-- this is now the current page since its ontop of the stack
+
+pressing forward > returns the future page back into current page (which is the top of the past stack)
+
+future stack :
+(1) NULL <-- the last value stored in this stack is now in past's stack top layer
+
+past stack :
+(1) ["https://google.com"] <-- came from future stack and is now the current page
+(2) ["https://youtube.com"] <-- pushed down because of the new value's location
+
+
+
+-----------------------------------------------------------------------*/
