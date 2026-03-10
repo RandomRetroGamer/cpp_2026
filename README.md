@@ -169,3 +169,67 @@ past stack :
 
 
 -----------------------------------------------------------------------*/
+/*----------------------------------------------------------------------
+
+summary of code note* :
+
+the point of this file (pokemon.cpp) is to store and manage pokemon classes
+such as :
+    name,
+    Pokedex number (Ndex)
+    Type(s)
+    summary description
+    
+the main things that these codes do creates pokemon's objects through constructors.
+
+it create a single-type pokemon with " Pokemon(string namem, int ndex, Type type1)"
+example:
+    ultra_monkey
+    #1
+    Fighting
+    
+this cpp file also uses a two-type pokemon,
+Pokemon(string name, int ndex, Type type1, Type type2) example :
+    ultra_monkey
+    #1
+    Flying / normal
+
+Pokemon(string summary) example :
+    "ultra_monkey, #01, Flying, normal"
+    
+    this constructors name, Ndex number, type(s)
+
+the other thing this code access pokemon information that several function allows 
+other of hte porgram to get information about the pokemon.
+
+name()      → returns the pokemon's name
+Ndex()      → returns the pokedex number
+type1()     → return the first type
+type2()     → return the second type
+is_multitype() → checks if the pokemon has two types 
+
+convert the types between and enum 
+the file also contains other helps functions
+
+type_to_string()
+string_to_type()
+
+these functions convert enum → (to) string
+
+example:
+    Pokemon::Flying → "Flying"
+    "Flying" → Pokemon::Flying
+    
+summary → creates a formatted string that describes the pokemon
+example output "ultra_monkey, #1, flying, normal"
+
+saving pokemon to files and displays them in the program
+
+the damage_multiplier(Type attack_type) provides a placeholder for battle damage
+calculations
+
+want more information on pokedex.cpp? check the file!
+
+----------------------------------------------------------------------*/
+
+
