@@ -169,6 +169,9 @@ past stack :
 
 
 -----------------------------------------------------------------------*/
+
+#Homework 5
+
 /*----------------------------------------------------------------------
 
 summary of code note* :
@@ -231,5 +234,66 @@ calculations
 want more information on pokedex.cpp? check the file!
 
 ----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------
 
+pokedex.cpp code summary :
+
+As you can see this assignment has 2 user made .cpp files, so this summary 
+will be focused on the pokedex.cpp, if you want information on pokemon.cpp
+file please check that file instead.
+
+This code shows the control we have over and access from the "pokedex.txt",
+we use an array that equals 1000.
+
+the array stores either 2 types of values,
+A[1] -> pokemon_example
+A[2] -> nullptr
+
+and the code response on the value that is stored. 
+
+we use 6 main functions that control how the data is stored or minpulated
+
+void Pokedex::add(Pokemon* p) (1) :
+    This gets the Pokemon's Ndex number
+    it uses as index in the array
+    stores the Pokemon's pointer in the slot
+    
+    A[25] -> Pikachu
+    ...
+    A[56] -> monkey
+    
+Pokemon* Pokedex::lookup_by_Ndex(int ndex) (2) :
+    checks if the index is valid
+    returns the pokemon's stored in that index
+    
+    lookup_by_Ndex(56) -> returns monkey as the value
+    if we remember the value A[56] from the pervious example 56 -> returns monkey
+    
+Pokemon* Pokedex::lookup_by_name(string name) (3) :
+    loops through the entire array,
+    compares each pokemon's name
+    returns the matching pokemons
+    
+    lookup_by_name("monkey") -> the pointer is now monkey
+    
+void Pokedex::remove(Pokemon* p) (4) :
+    finds the pokemon's Ndex number
+    set that slot in the array in nullptr
+    
+    A[55] -> nullptr // removes the nullptr from the pokedex //
+
+int Pokedex::size() (5) :
+    loops through the entire array (again)
+    counts how many slots are NOT nullptr
+    
+    size() -> 42 // example duh not real // 
+    
+void Pokedex::save(string filename) (6) :
+    opens a file
+    loops through all pokemon's stored
+    writes each Pokemon's summary to the file
+    
+    "025, pikachu eletric"
+    
+-----------------------------------------------------------------------*/
 
