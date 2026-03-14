@@ -297,3 +297,80 @@ void Pokedex::save(string filename) (6) :
     
 -----------------------------------------------------------------------*/
 
+homework 6
+
+/*-----------------------------------------------------------------------
+
+full summary code note* :
+
+this assignment was quite shorter than the last ones but who am i to 
+complain about that. This logic however was the main meat just like 
+all the other assignments but was do-able. anyways now lets get into 
+the summary. 
+
+if we remember this code has three Players that simulates a match,
+(1) defender, (1) hunter, and (1) bard. 
+
+the queue that manages follows the (first in, first out) behavior where 
+the first person that joined, well first, is prioritized.
+
+we store the players using a "queue" or in the code >> Player** players
+that uses a dynamic array of player pointers (fancy)
+
+we uses index to keep track of the front and back of the "queue" using 
+more fancy code.
+
+Back of the queue = index 0
+front of the queue = index count - 1
+
+example using my funny humor of names :
+
+ back                                     front
+  v                                         v
+[pro-gamer] [ultra-noob] [league-sweat] [mega-rager]
+    0             1             2            3 
+    
+--- imporant varaibles ---
+
+Player** players; // dynamic array storing pointers to players
+
+int count; // tracks how many players are currently in the queue
+
+int capacity; // tracks maximum size of the array 
+
+
+--- imporant functions and or constructors ---
+
+LFGQueue::LFGQueue(); // creates an empty queue,
+sets capacity to 100
+sets player count to 0
+allocates memory to player array 
+
+int LFGQueue::size(); // returns number of players currently in the queue 
+
+void LFGQueue::push_player(Player* p); // adds a new player to back of the queue,
+if the array is full -> doubles capacity,
+shift all players to the right,
+insert new player at index 0,
+increase count
+
+if you want more information how this works i highly recommend you check out 
+" void LFGQueue::push_player(Player* p) code note* "
+
+Player* front_player(Player::Role r) // finds the frontmost player with a specific role,
+start searching from front " (count -1 ) ",
+moves towards the back,
+return the first plater with role "r".
+returns >> pointer ot player IF found OR nullptr if NOT found.
+
+bool front_group(Player** group); // checks if the queue contains a complete group
+
+void pop_group(); // removes one full group from the queue
+
+basically this code maintains the FIFO queue order by using the dynamic arrays we created 
+and automatically resize when the queue grows, this is all supported by 
+adding players, finding players and removing players, finally forming players.
+
+-----------------------------------------------------------------------*/
+
+
