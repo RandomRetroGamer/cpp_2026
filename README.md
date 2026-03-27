@@ -378,4 +378,52 @@ adding players, finding players and removing players, finally forming players.
 
 -----------------------------------------------------------------------*/
 
+homework 7
+
+/*------------------------------------------------------------------------
+
+summary of code note* :
+
+This game matchmaking uses a "linked-list-based" matchmaking queues for 
+a simulated online game. This is done by three main groups,
+
+>> defender
+>> hunter
+>> bard
+
+using three separate sub-queues to ensure that adding or removing players.
+
+The player classes are simple data containers that stores a players name and
+their role which is defined as enum where Defender = 0, Hunter = 1 and Bard = 2
+
+The LFGQueue class is the manager that handles the logic, where it contains three 
+interal linked that tracked by three array. 
+
+>> heads[3]: points to the front of each role's queues
+>> tails[3]: points to the end of each role queues (allowing for instant additions)
+>> counts[3]: interger tracking how many players are in each specific role
+
+more than importantly we have the functions we have to go through where it 
+actually makes the meat of the code,
+
+Functions:
+
+>> push_player() >> creates a new node and addits back of the list according to that's 
+player's role.
+
+>> front_player() >> returns the player at the front of a specific role's queues
+without removing them
+
+>> pop_player() >> removes the first player in line for a specific role and deletes
+their Node to free memory
+
+>> front_group() >> checks if atleast one Defender, hunter, bard are present, if so 
+it returns their addresses as a "complete group"
+
+>> pop_group() >> removes the head of all three queues simulaneously one a full
+party is formed.
+
+>> size() >> returns the sum of all players across all three roles.
+
+------------------------------------------------------------------------*/
 
