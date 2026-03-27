@@ -3,13 +3,13 @@ class work of comp science 2 c++
 
 > includes graphics, with basic rendering 
 
-> includes homework 1 
-> Includes homework 2 
-> Includes homework 3
-> Includes homework 4
-> Includes homework 5
-> Includes homework 6
-> Includes homework 7
+> includes homework 1 \
+> Includes homework 2 \
+> Includes homework 3 \
+> Includes homework 4 \
+> Includes homework 5 \
+> Includes homework 6 \
+> Includes homework 7 \
 
 # build sh file for cpp
 
